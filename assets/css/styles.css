@@ -180,12 +180,82 @@ img {
 }
 /*=============== BREAKPOINTS ===============*/
 /* For small devices <> */
-
+@media (width <= 320px) {
+	.home__title {
+		font-size: 6rem;
+	}
+}
 
 /* For medium devices <> */
+@media (width >= 576px) {
+	.home__images img {
+		width: 100%;
+		right: 0;
+	}
 
+	.home__description {
+		width: 450px;
+	}
+}
+
+@media (width >= 768px) {
+	.home__title {
+		width: 100%;
+		display: grid;
+	}
+
+	.home__title span {
+		justify-self: flex-end;
+		padding-right: 4rem;
+		text-align: right;
+	}
+}
 
 /* For large devices <> */
+@media (width >= 1150px) {
+	.container {
+		margin-inline: auto;
+	}
 
+	.nav {
+		height: calc(var(--header-height) + 2rem);
+	}
+
+	.nav__toggle, 
+	.nav__close {
+		display: none;
+	}
+
+	.nav__list {
+		flex-direction: row;
+		align-items: center;
+		column-gap: 4rem;
+	}
+
+	.home__container {
+		height: 860px;
+	}
+
+	.home__title {
+		max-width: 1120px;
+		bottom: initial;
+		top: 11rem;
+	}
+
+	.home__title span {
+		padding-right: 3rem;
+	}
+}
+
+@media (width >= 1500px) {
+	.home__images img {
+		bottom: -4rem;
+	}
+}
 
 /* For taller devices */
+@media (width >= 1150px) and (height >= 860px) {
+	.home__container {
+		height: 100vh;
+	}
+}
