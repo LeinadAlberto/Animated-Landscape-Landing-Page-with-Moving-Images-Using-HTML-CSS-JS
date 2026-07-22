@@ -29,3 +29,51 @@ const linkAction = () => {
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*=============== GSAP ANIMATION ===============*/
+gsap.defaults({opacity: 0, duration: 1.5, y: 300, ease: 'back.out(1.6)'})
+
+const tl = gsap.timeline() 
+
+tl.from('.home__img-7', {}, '.3')
+tl.from('.home__img-5', {}, '.6')
+tl.from('.home__img-6', {}, '.9')
+tl.from('.home__img-4', {}, '1.2')
+tl.from('.home__img-2', {}, '1.5')
+tl.from('.home__img-3', {}, '1.8')
+tl.from('.home__img-1', {}, '2.1')
+tl.from('.home__description', {}, '1.5')
+tl.from('.home__title', {}, '2.1')
+.to('.home__img-7', {
+   y: 25, 
+   opacity: 1,
+   duration: 4, 
+   repeat: -1, 
+   yoyo: true, 
+   ease: 'sine.inOut',
+})
+.to('.home__img-5', {
+   y: 0, 
+   x: 50, 
+   opacity: 1,
+   duration: 3, 
+   repeat: -1, 
+   yoyo: true, 
+   ease: 'sine.inOut',
+}, '<')
+.to('.home__img-4', {
+   y: 0, 
+   x: -50, 
+   opacity: 1,
+   duration: 3, 
+   repeat: -1, 
+   yoyo: true, 
+   ease: 'sine.inOut',
+}, '<')
+.to('.home__img-1', {
+   scale: 0.8,  
+   y: 0, 
+   opacity: 1,
+   duration: 4, 
+   repeat: -1, 
+   yoyo: true, 
+   ease: 'power1.inOut',
+}, '<')
